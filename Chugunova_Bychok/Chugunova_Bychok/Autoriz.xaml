@@ -1,0 +1,50 @@
+﻿<Window x:Class="Chugunova_Bychok.Autoriz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chugunova_Bychok"
+        mc:Ignorable="d"
+        Title="Autoriz" Height="450" Width="450" Background="Aqua" Icon="C:\Users\Преподаватель\source\repos\ИСП9-4\Chugunova_Bychok\Chugunova_Bychok\images\Avat.png" WindowStyle="None">
+    <Grid>
+        
+        <Border Margin="25" CornerRadius="20" Background="White" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                 <Label Content="Вход" 
+                        Grid.Row="1" 
+                        HorizontalAlignment="Center" 
+                        FontSize="25"/>
+                <Button Content="X"
+                        x:Name="exit"
+                        Height="20" 
+                        Width="20" 
+                        HorizontalAlignment="Right" 
+                        Margin="25,0"
+                        Click="Exit_Click"/>
+                <Label Content="Логин"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom"
+                       FontSize="15"/>
+                <TextBox x:Name="login" Grid.Row="3" Height="25" Width="250"/>
+                <Label Content="Пароль" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15"/>
+                <PasswordBox x:Name="password" Grid.Row="5" Height="25" Width="250"/>
+                <Button x:Name="enter" Content="Вход" IsDefault="True" Width="100" Height="25" Grid.Row="7" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="71,0" Click="Enter_Click"/>
+                <Button x:Name="registr" Content="Регистрация" Width="100" Height="25" Grid.Row="7" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="71,0" Click="Registr_Click"/>
+
+            </Grid>
+        </Border>
+       
+    </Grid>
+</Window>

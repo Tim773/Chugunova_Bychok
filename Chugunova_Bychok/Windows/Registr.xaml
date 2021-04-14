@@ -1,0 +1,55 @@
+﻿<Window x:Class="Chugunova_Bychok.Registr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chugunova_Bychok"
+        mc:Ignorable="d"
+        Title="Registr" Height="550" Width="700" Background="Aqua" WindowStyle="None">
+    <Grid>
+        <Button Content="X" x:Name="exit1" Height="20" Width="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Click="Exit1_Click"/>
+        <Border Margin="25" CornerRadius="20" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="111*"/>
+                    <ColumnDefinition Width="196*"/>
+                    <ColumnDefinition Width="335*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Фамилия" Grid.Row="1"  FontSize="20" Width="100" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Регистрация" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"   Width="194" Grid.ColumnSpan="3"/>
+                <Label Content="Имя" Grid.Row="2"  FontSize="20" Width="50" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Логин" Grid.Row="3"  FontSize="20" Width="70" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Пароль" Grid.Row="4"  FontSize="20" Width="80" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Пол" Grid.Row="5"  FontSize="20" Width="80" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Возраст" Grid.Row="6"  FontSize="20" Width="90" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Вес" Grid.Row="7"  FontSize="20" Width="50" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <Label Content="Рост" Grid.Row="89"  FontSize="20" Width="80" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+                <TextBox x:Name="lname" Grid.Row="1" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <TextBox x:Name="fname" Grid.Row="2" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <TextBox x:Name="login" Grid.Row="3" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <TextBox x:Name="pass" Grid.Row="4" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <ComboBox Name="pol" Grid.Column="1" Grid.Row="5" Margin="0,11" ItemsSource="{Binding Gender.gender}" DisplayMemberPath="gender" SelectedValuePath="ID_Gender" Loaded="Pol_Loaded"/>
+                <DatePicker x:Name="old" Grid.Row="6" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <TextBox x:Name="wes" Grid.Row="7" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <TextBox x:Name="rost" Grid.Row="8" Grid.Column="1"  FontSize="20" Margin="0,11"/>
+                <Border Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" BorderThickness="5" BorderBrush="Black" Width="200">
+                    <Image Source="C:\Users\Преподаватель\source\repos\ИСП9-4\Chugunova_Bychok\Chugunova_Bychok\images\Avat.png" />
+                </Border>
+                <Button x:Name="addphoto" Content="Добавить фото" Width="150" Height="30" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" />
+                <Button x:Name="okreg" Content="Зарегестрироваться" Width="150" Height="25" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"  Click="Okreg_Click"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
